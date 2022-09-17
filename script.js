@@ -8,12 +8,28 @@ const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 console.log(me.style.width);
 console.log(me.style.height);
 
-// let progress = document.getElementById('progressbar');
+// let progress = document.getElementById('progress-bar');
 // let totalHeight = document.body.scrollHeight;
 // window.onscroll = function() {
-//     let progressHeight = (window.pageYOffset / totalHeight) * 100 * 10;
+//     let progressHeight = (window.pageYOffset / totalHeight) * 100;
 //     progress.style.height = progressHeight + "%";
 // }
+
+function scrollbarProgress() {
+    let totalHeight = document.body.scrollHeight;
+    let currentYOffset = document.documentElement.scrollTop;
+    let windowHeight = document.documentElement.clientHeight;
+
+    let scrollbar = document.querySelector(".scrollbar");
+
+    console.log(totalHeight);
+    console.log(currentYOffset);
+    console.log(windowHeight);
+
+    scrollbar.style.height = Math.round((currentYOffset / (totalHeight - windowHeight)) * 100) + "%";
+}
+
+document.addEventListener("scroll", scrollbarProgress);
 
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active');
@@ -64,7 +80,9 @@ setTimeout(() => {
 
 let types = ["circle", "square", "line"];
 
-let pieces = 35;
+let pieces = 75;
+
+if (document.documentElement.clientWidth < 920) pieces = 37;
 
 for (i=0; i<pieces; i++) {
     makePart();
@@ -87,6 +105,7 @@ function makePart() {
 
     const obj = document.createElement('div');
     obj.classList.add(types[ranType].toString());
+    if (types[ranType] == "line") obj.style.transform = `rotate(calc(${randomNum(360) + 1} * 1deg))`;
     obj.style.left = `${ranWidth}px`;
     obj.style.top = `${ranHeight}px`;
     headerBG.appendChild(obj);
@@ -100,45 +119,3 @@ let header = document.querySelector('header');
 
 let centerScreenW = document.documentElement.clientWidth / 2;
 let centerScreenH = document.documentElement.clientHeight / 2;
-
-// header.addEventListener('mousemove', (e) => {
-//     let headerBG = document.querySelector('.header-background');
-//     let difX;
-//     let difY;
-//     let direction = {
-//         x: 0,
-//         y: 0
-//     }
-
-//     let fromLeft;
-//     let fromTop;
-
-//     if (e.screenX < centerScreenW) {
-//         difX = centerScreenW - e.screenX;
-//         direction.x = 1;
-//     } else if (e.screenX > centerScreenW) {
-//         difX = e.screenX - centerScreenW;
-//         direction.x = 0;
-//     }
-//     if (e.screenY < centerScreenH) {
-//         difY = centerScreenH - e.screenY;
-//         direction.y = 1;
-//     } else if (e.screenY > centerScreenH) {
-//         difY = e.screenY - centerScreenH;
-//         direction.y = 0;
-//     }
-    
-//     if (direction.x == 1) {
-//         fromLeft = centerScreenW + difX;
-//     } else if (direction.x == 0) {
-//         fromLeft = difX;
-//     }
-//     if (direction.y == 0) {
-//         fromTop = difY;
-//     } else if (direction.y == 1) {
-//         fromTop = centerScreenH + difY;
-//     }
-
-    // headerBG.style.left = `${difY / 100}px`;
-    // headerBG.style.left = `${difX / 100}px`;
-// });
