@@ -5,6 +5,9 @@ const buzz = document.querySelector(".buzz");
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
+console.log(me.style.width);
+console.log(me.style.height);
+
 // let progress = document.getElementById('progressbar');
 // let totalHeight = document.body.scrollHeight;
 // window.onscroll = function() {
@@ -30,13 +33,15 @@ title.addEventListener('mouseout', () => {
 });
 
 me.addEventListener('mouseover', () => {
-    me.style.width = "200px";
+    me.style.width = "20%";
     me.style.transition = "all .5s ease 0s";
+    console.log(me.style.width);
 });
 
 me.addEventListener('mouseout', () => {
-    me.style.width = "150px";
+    me.style.width = "15%";
     me.style.transition = "all .5s ease 0s";
+    console.log(me.style.width);
 });
 
 requestAnimationFrame(buzzFunc);
@@ -80,26 +85,11 @@ function makePart() {
     console.log(screenWidth);
     console.log(ranWidth);
 
-    if (types[ranType] === "circle") {
-        const circle = document.createElement('div');
-        circle.classList.add('circle');
-        circle.style.left = `${ranWidth}px`;
-        circle.style.top = `${ranHeight}px`;
-        headerBG.appendChild(circle);
-    } else if (types[ranType] === "square") {
-        const square = document.createElement('div');
-        square.classList.add('square');
-        square.style.left = `${ranWidth}px`;
-        square.style.top = `${ranHeight}px`;
-        headerBG.appendChild(square);
-    } else if (types[ranType] === "line") {
-        const line = document.createElement('div');
-        line.classList.add('line');
-        line.style.transform = `rotate(calc(${randomNum(360)} * 1deg))`;
-        line.style.left = `${ranWidth}px`;
-        line.style.top = `${ranHeight}px`;
-        headerBG.appendChild(line);
-    }
+    const obj = document.createElement('div');
+    obj.classList.add(types[ranType].toString());
+    obj.style.left = `${ranWidth}px`;
+    obj.style.top = `${ranHeight}px`;
+    headerBG.appendChild(obj);
 }
 
 function randomNum(amount) {
