@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
 
 body {
@@ -85,7 +86,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    font-size: .8rem;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -218,13 +219,13 @@ h2 {
 }
 
 .header h1 {
-    font-size: auto;
+    font-size: 1.5rem;
     animation-name: zoomTextJames;
     animation-duration: 1s;
 }
 
 .header img {
-    width: 150px;
+    width: 15%;
     height: auto;
     border: 1px solid black;
     border-radius: 50%;
@@ -329,26 +330,26 @@ section {
 }
 
 @keyframes zoom {
-    0% {width: 100px; opacity: 0;}
-    30% {width: 75px;}
-    70% {width: 170px;}
-    100% {width: 150px; opacity: 1;}
+    0% {width: 10%; opacity: 0;}
+    30% {width: 12%;}
+    70% {width: 18%;}
+    100% {width: 15%; opacity: 1;}
 }
 
 @keyframes zoomTextJames {
     from {font-size: 0;}
-    to {font-size: auto;}
+    to {font-size: 1.5rem;}
 }
 
 @keyframes buzzAn {
-    0% {font-size: .9rem;}
+    0% {font-size: 1rem;}
     40% {font-size: .6rem;}
     70% {font-size: .9rem;}
     85% {font-size: .8rem;}
-    100% {font-size: .9rem;}
+    100% {font-size: 1rem;}
 }
 
-@media (max-width: 600) {
+@media (max-width: 600px) {
     .about-content {
         display: block;
     }
