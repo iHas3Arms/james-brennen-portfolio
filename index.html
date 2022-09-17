@@ -8,6 +8,7 @@
     <title>James Brennen | Portfolio</title>
 </head>
 <body>
+    <div class="scrollbar"></div>
     <div class="fixed">
         <nav>
             <hr>
@@ -15,7 +16,7 @@
             <div class="navbar-links">
                 <ul>
                     <li><a href="#a">About</a></li>
-                    <li><a href="#s">Skills</a></li>
+                    <!-- <li><a href="#s">Skills</a></li> -->
                     <li><a href="#p">Projects</a></li>
                     <li><a href="#l">Languages</a></li>
                     <li><a href="#h">Hobbies</a></li>
@@ -32,7 +33,7 @@
     <header id="header">
         <div class="header-background"></div>
         <div class="header">
-            <img class="me" alt="A picture of me, James Brennen" src="headshot.jpeg">
+            <img class="me" alt="A picture of me, James Brennen" src="img/headshot.jpeg">
             <h1 class="metext">James Brennen</h1>
             <span class="introtext">
                 Hey. I'm a <span class="buzz">programmer</span>.
@@ -40,40 +41,126 @@
         </div>
     </header>
     <section class="about" id="a">
-        <h2 class="about-me">About Me</h2>
+        <h2>About Me</h2>
         <div class="about-content">
+            <img class="me-smol" alt="A picture of me, James Brennen" src="img/headshot.jpeg">
             <p class="about-me-text">
                 Welcome! I'm <strong class="darker">James</strong> - the programmer in question. 
                 I would like to welcome to you to my website 
                 <strong class="darker">which I coded myself from scratch</strong> 
-                using no external libraries. Snoop around and you'll find a selection 
+                using no external libraries. I have been in love with coding and learning 
+                of computers and such since the days I was 11 (which, at the time of 
+                writing, was 2 years ago). Snoop around and you'll find a selection 
                 of projects I have made along the way, as well as more about me as a person. 
                 To start that off, I will tell you that I whole-heartedly believe in 
                 committing to my task with as much focus as humanly possible. I am a 
                 hard-worker and will not stop learning until the day pigs fly. Find out more 
                 below!
             </p>
-            <div class="time-spent">
-                <div class="language-time">
-                    <div class="webdev-time">
-                        <div class="progressbar"></div>
-                        <div class="progressbar-track"></div>
-                    </div>
+        </div>
+        <div class="time-spent">
+            <span>To Scale Representations:</span>
+            <div class="time">
+                <div class="ts-title">Website Development</div>
+                <div class="progressbar-track">
+                    <div class="progressbar webdev"></div>
                 </div>
+            <div class="percentage">99% | 2 years</div>
+            </div>
+            <div class="time">
+                <div class="ts-title">Node.js</div>
+                <div class="progressbar-track">
+                    <div class="progressbar nodejs"></div>
+                </div>
+                <div class="percentage">95% | 1.9 years</div>
+            </div>
+            <div class="time">
+                <div class="ts-title">Python</div>
+                <div class="progressbar-track">
+                    <div class="progressbar py"></div>
+                </div>
+                <div class="percentage">75% | 1.5 years</div>
+            </div>
+            <div class="time">
+                <div class="ts-title">C++</div>
+                <div class="progressbar-track">
+                    <div class="progressbar cpp"></div>
+                </div>
+                <div class="percentage">10% | 0.2 years</div>
             </div>
         </div>
     </section>
-    <section class="skills" id="s">
-
+    <hr class="separator">
+    <!-- <section class="skills" id="s">
+        <h2>My Skills</h2>
+        <p class="my-skills-text">
+            Here I will tell you all the skills I have collected over the 13 years of my 
+            life surrounded by great friends, family, and role models.
+            <br>
+            <br>
+            As you have seen above, I like learning more than one thing at once. 
+            This is helpful because studies have shown that trying to learn and focus 
+            on multiple things at the same time fires more neurons and therefore means 
+            you learn more, faster. This also shows that I am a very capable worker 
+            who is willing to push myself to the absolute limits and never give up 
+            trying to be the best. Whether I know a language or not, I always try 
+            to learn more about it and read the documentation to get more information 
+            and progress one step further to being the best.
+            <br>
+            <br>
+            Talking of languages, I am multilingual. I speak English, Spanish, and Romanian. 
+            This indeed is a skill, not a brag, as it means I can organise deals and 
+            win the affection of foreign businesses and companies we would like to make 
+            deals with and have them appreciate the fact that the business they're talking 
+            to has someone that has learnt their native language.
+            <br>
+            <br>
+            In addition to my learning capabilities, I am an extremely inquisitive fellow 
+            which many would say is a great personality. I always want to learn more, 
+            once I'm hooked on something, I try to learn as much as possible about the 
+            subject. This could be seen as a weakness in some scenarios, and I will admit, 
+            it has become one in some situations. However, I believe that the positives of 
+            this trait outweigh the negatives in great ratio.
+            <br>
+            <br>
+            Finally, I have always been interested in technology. And I'm not talking about 
+            the typical Gen Z person, who is always on their phone, excited about the next 
+            iPhone release, who plays Fortnite ritually (which I personally don't see the 
+            hype of anymore, but to each their own, I suppose). I'm talking about it in the 
+            sense that I have always wanted to achieve a greater understanding about the 
+            world that we live in and how to control it, and with the world being filled 
+            to the brim with electronics these days, it is what I have taken a liking to. 
+            I want to learn how to make it do things, how a Central Processing Unit (CPU) 
+            actually does what it can do, what threads are, what channels are, what a chipset 
+            is, how to make one of these motherboards or CPUs, and so on, I want to gain a 
+            deeper appreciation of what we use everyday, and how I can use it to affect 
+            someone's life in a positive way. I always want to help people, even if it means 
+            putting myself at a disadvantage, and coding might be the best way I can.
+            <br>
+            <br> 
+            So if you find someone else who is currently better than me at what I know and much 
+            more, then... great! I'm glad you found someone you are happy with! But if  you 
+            want someone with so much grit, and determination, that they would not stop until 
+            the phrase, "I am the best at what I do," would indeed not be false... 
+            <br>
+            <br>
+            choose me.
+        </p> -->
     </section>
     <section class="projects" id="p">
-
+        <h2>Selected Projects</h2>
+        <div class="grid">
+            <div class="section">
+            </div>
+        </div>
     </section>
+    <hr class="separator">
     <section class="languages" id="l">
-
+        <h2>Tools & Languages</h2>
     </section>
+    <hr class="separator">
     <section class="hobbies" id="h">
-
+        <h2>My Hobbies</h2>
     </section>
 </body>
 <script src="script.js"></script>
